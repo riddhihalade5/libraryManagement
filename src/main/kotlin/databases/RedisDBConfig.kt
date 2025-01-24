@@ -7,7 +7,7 @@ import io.lettuce.core.*
 import javax.inject.Singleton
 
 @Module
-public class RedisDBConfig {
+class RedisDBConfig {
     @Provides
     @Singleton
     fun provideLettuceRedisClient(): LettuceRedisClient {

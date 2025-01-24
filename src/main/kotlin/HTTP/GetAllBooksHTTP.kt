@@ -6,7 +6,7 @@ import io.ktor.server.response.*
 import io.ktor.server.routing.*
 import javax.inject.Inject
 
-class GetBookAllBooksHTTP
+class GetAllBooksHTTP
 @Inject
 constructor(private val getAllBooksAPI: GetAllBooksAPI){
     suspend fun invokeHTTP(call: RoutingCall) {
