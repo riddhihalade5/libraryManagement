@@ -16,7 +16,7 @@ fun main(args: Array<String>) {
       json()
     }
     routing {
-      bookRoute(httpComponent)
+//      bookRoute(httpComponent)
     }
 
   }.start(wait = true)

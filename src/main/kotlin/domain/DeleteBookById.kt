@@ -1,15 +1,15 @@
 package com.example.domain
 
-import com.example.data.DeleteBookDT
+import com.example.data.Repo.BooksRepo
 import javax.inject.Inject
 
 
 class DeleteBookById
 @Inject
-constructor(private val deleteBookDT: DeleteBookDT)
+constructor(private val booksRepo: BooksRepo)
 {
     suspend fun invoke(iD : Int) {
-        deleteBookDT.invokeDT(iD)
+        booksRepo.deleteBookById(iD)
 
     }
 }

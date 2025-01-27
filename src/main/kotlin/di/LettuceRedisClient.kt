@@ -2,6 +2,7 @@ package com.example.di
 
 import io.lettuce.core.RedisClient
 import io.lettuce.core.api.coroutines
+import kotlinx.coroutines.flow.toList
 import javax.inject.Inject
 
 class LettuceRedisClient
@@ -25,5 +26,9 @@ constructor(client: RedisClient) {
 
     suspend fun setex(key: String, seconds: Long, value: String) {
         commands.setex(key, seconds, value)
+    }
+
+    suspend fun keys(): List<String>{
+        return commands.keys("*").toList()
     }
 }

@@ -1,5 +1,6 @@
 package com.example.databases
 
+import com.example.data.Repo.BooksRepoPSQLImpl
 import dagger.Module
 import dagger.Provides
 import org.jetbrains.exposed.sql.*
@@ -17,6 +18,12 @@ class DBconfig {
       password = System.getenv("password")
     )
   }
-}
+
+  @Provides
+  @Singleton
+  fun provideBookRepoImpl(): BooksRepoPSQLImpl
+  {
+    return BooksRepoPSQLImpl()
+  }}
 
 

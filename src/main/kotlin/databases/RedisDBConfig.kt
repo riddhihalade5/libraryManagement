@@ -15,4 +15,11 @@ class RedisDBConfig {
         return LettuceRedisClient(client)
     }
 
+    @Provides
+    @Singleton
+    fun provideRedisClient(): RedisClient{
+         val clientRedis = RedisClient.create("redis://localhost:6379")
+        return clientRedis
+    }
+
 }
