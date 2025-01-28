@@ -1,9 +1,11 @@
 package com.example.databases
 
+import com.example.data.Repo.BooksRepo
 import com.example.data.Repo.BooksRepoPSQLImpl
 import dagger.Module
 import dagger.Provides
 import org.jetbrains.exposed.sql.*
+import javax.inject.Named
 import javax.inject.Singleton
 
 @Module
@@ -21,9 +23,12 @@ class DBconfig {
 
   @Provides
   @Singleton
-  fun provideBookRepoImpl(): BooksRepoPSQLImpl
+  @Named("psql")
+  fun provideBookRepoImpl(): BooksRepo
   {
     return BooksRepoPSQLImpl()
-  }}
+  }
+
+}
 
 

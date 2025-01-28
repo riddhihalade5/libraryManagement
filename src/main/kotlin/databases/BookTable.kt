@@ -4,7 +4,6 @@ import org.jetbrains.exposed.sql.Column
 import org.jetbrains.exposed.dao.id.EntityID
 import com.example.domain.entities.Genre
 import org.jetbrains.exposed.dao.id.IdTable
-import kotlinx.serialization.Serializable
 
 
 object BookTable : IdTable<Int>("books"){

@@ -21,7 +21,6 @@ repositories {
 }
 
 
-
 dependencies {
 
     implementation("io.lettuce:lettuce-core:6.3.1.RELEASE")
@@ -41,6 +40,7 @@ dependencies {
     implementation("org.jetbrains.exposed:exposed-dao:0.58.0")
     implementation("org.jetbrains.exposed:exposed-jdbc:0.58.0")
     implementation("org.postgresql:postgresql:42.5.0")
+    kapt("com.google.dagger:dagger-compiler:2.46.1")
     implementation ("com.zaxxer:HikariCP:5.0.0")
     implementation("io.ktor:ktor-server-sessions:2.0.0")
     implementation("com.google.dagger:dagger:2.55")

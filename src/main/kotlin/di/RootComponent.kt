@@ -1,5 +1,6 @@
 package com.example.di
 
+import com.example.data.Repo.BooksRepo
 import com.example.databases.DBconfig
 import com.example.databases.RedisDBConfig
 import dagger.Component
@@ -18,4 +19,5 @@ interface RootComponent{
     val redisClient: RedisClient
     val lettuceRedisClient: LettuceRedisClient
     val database: Database
+    val booksRepo: BooksRepo
 }
